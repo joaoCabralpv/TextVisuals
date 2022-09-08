@@ -11,9 +11,13 @@ def Triangulo(tipo, base, altura, char):
         baseMaiorAltura = 1 if base > altura else 0
         porporcaoBaseAltura = base/altura
         for i in range(altura):
-            print(char*int(i*((porporcaoBaseAltura))+1+baseMaiorAltura)) 
+            print(char*int(i*((porporcaoBaseAltura))+1+baseMaiorAltura))
+    
 
-listaOpecoes = ["Linha", "Triângulo equilatro", "Triângulo reto", "Triângulo reto invertido" ,"Retangulo", "Quadrado"]
+
+
+
+listaOpecoes = ["Linha", "Triângulo equilatro", "Triângulo reto","Retangulo", "Quadrado"]
 
 print("="*27)
 for i in range(len(listaOpecoes)):
@@ -29,10 +33,8 @@ elif escolha == 2:
 elif escolha == 3:
     Triangulo("Reto", int(input("Qual é a base do triângulo?: ").strip()), int(input("Qual é a altura do triângulo?: ").strip()), input("Qual é o caractere que compõe o triângulo?: ")[0])
 elif escolha == 4:
-    Triangulo("Invertido")
-elif escolha == 5:
     Retangulo()
-elif escolha == 6:
+elif escolha == 5:
     Quadrado()
 else:
     print("\033[0;31m Erro, escolha invalida\033[0;0m")
