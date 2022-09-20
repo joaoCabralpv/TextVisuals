@@ -12,7 +12,14 @@ def Triangulo(tipo, base, altura, char):
         porporcaoBaseAltura = base/altura
         for i in range(altura):
             print(char*int(i*((porporcaoBaseAltura))+1+baseMaiorAltura))
-    
+
+
+def Retangulo(largura, altura, char):
+    for i in range(altura):
+        Linha(largura, char)
+
+def Quadrado(tamanho, char):
+    Retangulo(tamanho, tamanho, char)
 
 
 
@@ -33,8 +40,8 @@ elif escolha == 2:
 elif escolha == 3:
     Triangulo("Reto", int(input("Qual é a base do triângulo?: ").strip()), int(input("Qual é a altura do triângulo?: ").strip()), input("Qual é o caractere que compõe o triângulo?: ")[0])
 elif escolha == 4:
-    Retangulo()
+    Retangulo(int(input("Qual é o largura do retângulo?: ").strip()), int(input("Qual é a altura do retângulo?: ").strip()), input("Qual é o caractere do retangulo?: ").strip()[0])
 elif escolha == 5:
-    Quadrado()
+    Quadrado(int(input("Qual é o tamanho do quadrado?: ").strip()),input("Qual é o caractere do quadrado?: ").strip()[0])
 else:
     print("\033[0;31m Erro, escolha invalida\033[0;0m")
